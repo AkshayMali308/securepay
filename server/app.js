@@ -14,12 +14,11 @@ const { errorHandler, notFound } = require("./src/middlewares/errorHandler");
 const app = express();
 
 app.use(helmet());
-app.use(
-  cors({
-    origin: "https://securepay-frontend.onrender.com" ,
-    credentials: true,
-  })
-);
+app.use(cors({ 
+  origin: "https://securepay-frontend-pl6a.onrender.com", 
+  credentials: true 
+}));
+
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
